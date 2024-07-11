@@ -10,8 +10,8 @@ const playlistRoutes = require("./routes/playlists");
 const songRoutes = require("./routes/songs");
 
 const PORT = 8000;
-// const CONNECTION_URL = "mongodb+srv://music:system2024@musicsystem.b4ps5zm.mongodb.net/music-system";
-const CONNECTION_URL = "mongodb://localhost:27017/music-system";
+const CONNECTION_URL = "mongodb+srv://music:system2024@musicsystem.b4ps5zm.mongodb.net/music-system";
+// const CONNECTION_URL = "mongodb://localhost:27017/music-system";
 
 app.use(cors({
     origin: ["http://localhost:3000", "https://music-playlist-client.vercel.app"]
@@ -39,9 +39,20 @@ app.get("/test", async (req, res) => {
     }
 });
 
-app.listen(PORT, () => {
-    console.log("Server is running on port 8000");
-    mongoose.connect(CONNECTION_URL).then(() => {
+mongoose.connect(CONNECTION_URL)
+    .then(() => {
         console.log("Database is connected successfully");
+        app.listen(PORT, () => {
+            console.log("Server is running on port 8000");
+        });
+    })
+    .catch((error) => {
+        console.error("Database connection error: ", error);
     });
-});
+
+// app.listen(PORT, () => {
+//     console.log("Server is running on port 8000");
+//     mongoose.connect(CONNECTION_URL).then(() => {
+//         console.log("Database is connected successfully");
+//     });
+// });
