@@ -12,7 +12,7 @@ const PORT = 8000;
 const CONNECTION_URL = "mongodb+srv://music:system2024@musicsystem.b4ps5zm.mongodb.net/music-system";
 
 app.use(cors({
-    origin: ["https://music-playlist-client.vercel.app"]
+    origin: ["http://localhost:3000", "https://music-playlist-client.vercel.app"]
 }));
 app.use(express.json());
 

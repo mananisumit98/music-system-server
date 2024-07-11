@@ -17,5 +17,5 @@ module.exports = {
     SONG_ADDED: "Song is added in the playlist",
     DUPLICATE_SONG: "Song is already added in playlist",
     SONGS_SUCCESS: "Songs fetched successfully",
-    SONGS_DELETED: "Songs deleted successfully",
+    SONGS_DELETED: "Song is deleted successfully",
 }
