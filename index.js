@@ -10,10 +10,9 @@ const songRoutes = require("./routes/songs");
 
 const PORT = 8000;
 const CONNECTION_URL = "mongodb+srv://music:system2024@musicsystem.b4ps5zm.mongodb.net/music-system";
-// const CONNECTION_URL = "mongodb://localhost:27017/music-system";
 
 app.use(cors({
-    origin: ["http://localhost:3000", "https://music-playlist-client.vercel.app"]
+    origin: ["https://music-playlist-client.vercel.app"]
 }));
 app.use(express.json());
 
