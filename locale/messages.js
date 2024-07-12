@@ -3,10 +3,9 @@ module.exports = {
     CATCH_ERROR: "Catch Error Found",
     LOGIN_SUCCESS: "Logged in successfully",
     INVALID_CREDENTIALS: "Invalid Credentials",
-    USER_EXISTS: "Username already exists",
     EMAIL_EXISTS: "Email already exists",
-    USER_NOT_CREATED: "No user created",
-    USER_CREATED: "User created successfully",
+    USER_NOT_CREATED: "User is not registered",
+    USER_CREATED: "User registered successfully",
     PLAYLIST_UPDATED: "Playlist updated successfully",
     PLAYLIST_DELETED: "Playlist deleted successfully",
     PLAYLIST_SUCCESS: "Playlist fetched successfully",
@@ -17,5 +16,5 @@ module.exports = {
     SONG_ADDED: "Song is added in the playlist",
     DUPLICATE_SONG: "Song is already added in playlist",
     SONGS_SUCCESS: "Songs fetched successfully",
-    SONGS_DELETED: "Song is deleted successfully",
+    SONGS_DELETED: "Song is deleted successfully"
 }

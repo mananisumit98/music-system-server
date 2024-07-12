@@ -5,7 +5,7 @@ const jwt = require("jsonwebtoken");
 const User = require("../models/usersModal");
 const AuthToken = require("../models/authToken");
 
-const { NO_DATA, CATCH_ERROR, LOGIN_SUCCESS, INVALID_CREDENTIALS, USER_EXISTS, EMAIL_EXISTS, USER_NOT_CREATED, USER_CREATED } = require('../locale/messages');
+const { NO_DATA, CATCH_ERROR, LOGIN_SUCCESS, INVALID_CREDENTIALS, EMAIL_EXISTS, USER_NOT_CREATED, USER_CREATED } = require('../locale/messages');
 
 const { JWT_TOKEN } = require("../utils/constants");
 
