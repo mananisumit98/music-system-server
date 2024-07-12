@@ -12,14 +12,10 @@ const { JWT_TOKEN } = require("../utils/constants");
 const login = async (req, res) => {
     console.log("controller@users/login");
     try {
-        const { username, password } = req.body;
+        const { email_id, password } = req.body;
         const respObj = {};
 
-        const validateUser = await User.findOne({ username: username });
-
-        if (!validateUser) {
-            return res.json({ message: NO_DATA, success: false });
-        }
+        const validateUser = await User.findOne({ email_id: email_id });
 
         if (!validateUser || !await bcrypt.compare(password, validateUser.password)) {
             return res.json({ message: INVALID_CREDENTIALS, success: false });
